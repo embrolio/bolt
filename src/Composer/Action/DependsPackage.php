@@ -11,11 +11,7 @@ namespace Bolt\Composer\Action;
 final class DependsPackage extends AbstractDependencyAction
 {
     /**
-     * @param string $packageName
-     * @param string $textConstraint
-     * @param bool   $onlyLocal
-     *
-     * @return array
+     * {@inheritdoc}
      */
     public function execute($packageName, $textConstraint = '*', $onlyLocal = true)
     {

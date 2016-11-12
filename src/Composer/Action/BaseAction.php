@@ -258,7 +258,7 @@ abstract class BaseAction
     /**
      * Get all our repos.
      *
-     * @return \Composer\Repository\CompositeRepository
+     * @return \Composer\Repository\RepositoryInterface[]
      */
     protected function getRepos()
     {

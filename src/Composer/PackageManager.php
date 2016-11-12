@@ -3,6 +3,7 @@
 namespace Bolt\Composer;
 
 use Bolt;
+use Bolt\Composer\Package\Dependency;
 use Bolt\Extension\ResolvedExtension;
 use Bolt\Filesystem\Exception\ParseException;
 use Bolt\Translation\Translator as Trans;
@@ -140,7 +141,7 @@ class PackageManager
      * @param string $packageName
      * @param string $constraint
      *
-     * @return
+     * @return Dependency|null
      */
     public function dependsPackage($packageName, $constraint)
     {
@@ -171,7 +172,7 @@ class PackageManager
      * @param string $packageName
      * @param string $constraint
      *
-     * @return
+     * @return Dependency|null
      */
     public function prohibitsPackage($packageName, $constraint)
     {
