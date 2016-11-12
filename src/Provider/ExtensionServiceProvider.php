@@ -99,6 +99,7 @@ class ExtensionServiceProvider implements ServiceProviderInterface
                         'remove'    => $app->share(function () use ($app) { return new Action\RemovePackage($app); }),
                         'require'   => $app->share(function () use ($app) { return new Action\RequirePackage($app); }),
                         'search'    => $app->share(function () use ($app) { return new Action\SearchPackage($app); }),
+                        'scripts'   => $app->share(function () use ($app) { return new Action\RunScripts($app); }),
                         'show'      => $app->share(function () use ($app) { return new Action\ShowPackage($app); }),
                         'update'    => $app->share(function () use ($app) { return new Action\UpdatePackage($app); }),
                         // @codingStandardsIgnoreEnd
