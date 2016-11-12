@@ -551,6 +551,22 @@
             });
     }
 
+    function postPackageInstall() {
+        $.get(bolt.data('extend.baseurl') + 'runScript/post-package-install')
+            .done(function (data) {
+                feedbackDialogueLoad(
+                    bolt.data('extend.text.post-package-install'),
+                    bolt.data('extend.text.post-package-install') + ' …',
+                    false
+                );
+
+                feedbackDialogueSetMessage(data);
+            })
+            .fail(function () {
+                formatErrorLog();
+            });
+    }
+
     function install(e) {
         var packageName = $(e.target).data('package'),
             packageVersion = $(e.target).data('version');
@@ -760,21 +776,22 @@
             var request = $(e.target).data('request');
 
             switch (request) {
-                case 'update-check':      updateCheck(); break;
-                case 'update-run':        updateRun(); break;
-                case 'update-package':    updatePackage(e.originalEvent); break;
-                case 'check-package':     checkPackage(e.originalEvent); break;
-                case 'uninstall-package': uninstall(e.originalEvent); break;
-                case 'install-package':   install(e.originalEvent); break;
-                case 'prefill-package':   prefill(e.originalEvent); break;
-                case 'install-run':       installRun(e.originalEvent); break;
-                case 'autoload-dump':     autoloadDump(e.originalEvent); break;
-                case 'generate-theme':    generateTheme(e.originalEvent); break;
-                case 'package-available': packageAvailable(e.originalEvent); break;
-                case 'package-copy':      copyTheme(e.originalEvent); break;
-                case 'package-readme':    packageReadme(e.originalEvent); break;
-                case 'package-depends':   packageDepends(e.originalEvent); break;
-                case 'show-all':          showAllVersions(e.originalEvent); break;
+                case 'update-check':         updateCheck(); break;
+                case 'update-run':           updateRun(); break;
+                case 'update-package':       updatePackage(e.originalEvent); break;
+                case 'check-package':        checkPackage(e.originalEvent); break;
+                case 'uninstall-package':    uninstall(e.originalEvent); break;
+                case 'install-package':      install(e.originalEvent); break;
+                case 'prefill-package':      prefill(e.originalEvent); break;
+                case 'install-run':          installRun(e.originalEvent); break;
+                case 'autoload-dump':        autoloadDump(e.originalEvent); break;
+                case 'generate-theme':       generateTheme(e.originalEvent); break;
+                case 'package-available':    packageAvailable(e.originalEvent); break;
+                case 'package-copy':         copyTheme(e.originalEvent); break;
+                case 'package-readme':       packageReadme(e.originalEvent); break;
+                case 'package-depends':      packageDepends(e.originalEvent); break;
+                case 'show-all':             showAllVersions(e.originalEvent); break;
+                case 'post-package-install': postPackageInstall(e.originalEvent); break;
             }
         }
     };
