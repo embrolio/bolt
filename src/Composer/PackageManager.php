@@ -205,6 +205,17 @@ class PackageManager
     }
 
     /**
+     * Attempt to run a Composer script.
+     *
+     * @param string $eventName
+     * @param bool   $root
+     */
+    public function runScript($eventName, $root = false)
+    {
+        return $this->app['extend.action']['scripts']->execute($eventName, $root);
+    }
+
+    /**
      * Search for packages.
      *
      * @param $packages array Indexed array of package names to search
