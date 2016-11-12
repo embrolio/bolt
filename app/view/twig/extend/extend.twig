@@ -134,6 +134,11 @@
                                         <i class="fa fa-refresh fa-fw"></i> {{ __('page.extend.button.autoload-dump') }}
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="#" class="{% if not context.writeable or not context.online %} disabled{% endif %} clickspinner" data-request="post-package-install">
+                                        <i class="fa fa-copy fa-fw"></i> {{ __('page.extend.button.post-install-scripts') }}
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <p>
@@ -144,10 +149,14 @@
                             <strong>{{ __('page.extend.button.install-all') }}:</strong>
                             {{ __('page.extend.message.installs-all-listed-packages') }}
                         </p>
-                        <p>
-                            <strong>{{ __('page.extend.button.autoload-dump') }}:</strong>
-                            {{ __('page.extend.message.autoload-dump') }}
-                        </p>
+                    <p>
+                    <strong>{{ __('page.extend.button.autoload-dump') }}:</strong>
+                    {{ __('page.extend.message.autoload-dump') }}
+                    </p>
+                    <p>
+                    <strong>{{ __('page.extend.button.post-install-scripts') }}:</strong>
+                    {{ __('page.extend.message.post-install-scripts') }}
+                    </p>
                 </div>
             </div>
         </aside>
