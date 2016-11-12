@@ -2,6 +2,7 @@
 
 namespace Bolt\Nut;
 
+use Composer\Installer\PackageEvents;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -30,6 +31,7 @@ class ExtensionsSetup extends BaseCommand
     {
         $this->setupJson($output);
         $this->setupAutoloader($output);
+        $this->runPostPackageInstall($output);
     }
 
     /**
@@ -56,6 +58,18 @@ class ExtensionsSetup extends BaseCommand
         $output->write("\n<info>Updating autoloaders… </info>");
         $result = $this->app['extend.action']['autoload']->execute();
         $this->outputResult($output, $result);
+    }
+
+    /**
+     * Run Composer post-install scripts for installed packages.
+     *
+     * @param OutputInterface $output
+     */
+    private function runPostPackageInstall(OutputInterface $output)
+    {
+        $output->write("\n<info>Running post-install-scripts… </info>");
+        $this->app['extend.action']['scripts']->execute(PackageEvents::POST_PACKAGE_INSTALL);
+        $this->outputResult($output, 0);
     }
 
     /**
