@@ -16,7 +16,7 @@ class TranslationServiceProvider implements ServiceProviderInterface
             $app->register(
                 new Silex\Provider\TranslationServiceProvider(),
                 [
-                    'locale_fallbacks'     => ['en_GB', 'en'],
+                    'locale_fallbacks'     => ['es_AR', 'en'],
                 ]
             );
         }
