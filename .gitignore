@@ -12,6 +12,7 @@ phpunit.xml
 theme/*
 !theme/base-*
 !theme/default
+!theme/embrolio
 
 # Unless you want to store vendor's "state" in your Git repo.
 composer.phar

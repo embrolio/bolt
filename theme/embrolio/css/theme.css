@@ -1,0 +1,116 @@
+.headerphoto {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  min-height: 20vh;
+  max-height: 36vh; }
+
+.column, .columns {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+
+.headertitle {
+  text-align: center; }
+
+[type='search'] {
+  box-shadow: none; }
+
+ul.pagination {
+  background: #E6E6E8;
+  display: inline-block; }
+  ul.pagination a {
+    padding: 0.6em 1em;
+    text-decoration: none; }
+  ul.pagination .active a {
+    color: #EEF0EF;
+    background: #759DA7; }
+
+h1 a, h2 a, h3 a {
+  text-decoration: none; }
+
+p.meta {
+  font-size: 90%;
+  color: #666; }
+
+@media print, screen and (min-width: 40em) {
+  h1, h2 {
+    margin-bottom: 2rem; }
+  img {
+    margin: 0 auto 1rem;
+    max-width: 80%;
+    display: block; } }
+
+@media screen and (max-width: 39.9375em) {
+  .no-js .top-bar {
+    display: none; } }
+
+@media print, screen and (min-width: 40em) {
+  .no-js .title-bar {
+    display: none; } }
+
+.menu > li {
+  padding: 0;
+  background-color: #E6E6E8; }
+  .menu > li a {
+    color: #759DA7;
+    text-decoration: none; }
+  .menu > li.active > a {
+    color: #07182A;
+    background-color: inherit;
+    border-bottom: 1px solid #07182A; }
+
+.widgetholder .widget {
+  margin: 1.5em 0; }
+/* EMBROLIO STUFF */
+h1, h2, h3, h4, h5 {
+  font-family: 'Coda', cursive;
+}
+h2.blog-title {
+  color:#A7C8CF;
+}
+h2.blog-title>.dark {
+  color:#07182A;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #EEF0EF;
+  color: #07182A;
+}
+a {
+  color: #759DA7;
+}
+a:hover {
+  color: #A7C8CF;
+}
+.top-bar {
+  background-color: #E6E6E8;
+}
+ul.categorias {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 95%;
+  line-height: 140%;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+}
+
+code {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 95%;
+  line-height: 140%;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  background: #faf8f0;
+  display: block;
+  padding: 0.5em 1em;
+  border: 1px solid #bebab0;
+}
