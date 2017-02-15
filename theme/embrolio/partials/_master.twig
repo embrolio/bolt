@@ -23,7 +23,10 @@
         {% endblock headincludes %}
     </head>
     <body>
-
+        {% setcontent gablock = "block/google-analytics" %}
+        {% if gablock.content is defined %}
+            {{ gablock.content }}
+        {% endif %}
         {% block body %}
 
             {% if theme.layout.variant != 'wide' %}
