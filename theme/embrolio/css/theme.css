@@ -72,6 +72,11 @@ h2.blog-title {
 h2.blog-title>.dark {
   color:#07182A;
 }
+h1.not-found-block {
+  font-family: 'Coda', cursive;
+  font-size: 10em;
+  color:#07182A;
+}
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #EEF0EF;
