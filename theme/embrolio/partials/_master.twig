@@ -25,7 +25,9 @@
     <body>
         {% setcontent gablock = "block/google-analytics" %}
         {% if gablock.content is defined %}
+            <script>
             {{ gablock.content }}
+            </script>
         {% endif %}
         {% block body %}
 
