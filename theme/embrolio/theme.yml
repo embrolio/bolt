@@ -34,7 +34,7 @@ notfound: notfound.twig
 taxonomy_sort: DESC
 #homepage: pages/1
 listing_sort: datepublish DESC
-listing_records: 3
+listing_records: 10
 search_results_records: 10
 
 # Extra 'templatefields' can be specified for use in the records / contenttypes
