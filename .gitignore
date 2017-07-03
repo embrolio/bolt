@@ -65,3 +65,4 @@ Vagrantfile
 coverage.xml
 pimple.json
 dump.php
+robots.txt
